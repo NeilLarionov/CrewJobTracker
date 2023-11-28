@@ -437,6 +437,7 @@ void createNewJob(std::vector<std::unique_ptr<Jobs>>& jobsVec, std::vector<std::
 	do{
 		std::cout << "Which community is this job a part of? (Select number): ";
 		std::cin >> comSelect;
+		comSelect--;
 		int comVecSize = comVec.size();
 		if (comSelect == -1)
 		{
