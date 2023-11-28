@@ -99,7 +99,6 @@
     <File Name="Community.cpp"/>
     <File Name="Crew.cpp"/>
     <File Name="Crew.h"/>
-    <File Name="sudoCode.txt"/>
     <File Name="main.cpp"/>
   </VirtualDirectory>
 </CodeLite_Project>
