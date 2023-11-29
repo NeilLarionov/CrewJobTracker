@@ -285,36 +285,7 @@ void assignHouseToCrew(std::unique_ptr<Crew>& crew, std::vector<std::unique_ptr<
 		
 		std::cout << "Job was assigned successfully!" << std::endl;
 	}
-
-	
-	
-//	displayCommunityList(comVec);
-//	if (comVec.size() > 0)
-//	{
-//		
-//	
-//		int input{};
-//		int vecSize = comVec.size();
-//		do{
-//			std::cout << "Which Community is this job at: ";
-//			std::cin >> input;
-//		
-//		}while(input <= 0 || input > vecSize);
-//	
-//		input--;
-//	
-//		int lotNumber{};
-//	
-//		{
-//			std::cout << "Enter a lot number: ";
-//			std::cin >> lotNumber;
-//		}while(lotNumber <= 0);
-//	
-//		std::unique_ptr<Jobs> job = std::make_unique<Jobs>(*comVec.at(input), lotNumber);
-//		crew->assignHouse(*comVec.at(input), lotNumber);
-//	}
 }
-
 void editCrewName(std::unique_ptr<Crew>& crew)
 {
 	system("cls");
@@ -459,7 +430,7 @@ void createNewJob(std::vector<std::unique_ptr<Jobs>>& jobsVec, std::vector<std::
 	for (const auto &job : jobsVec) // Check to see if Lot number already exists for the Community the job is for
 	{
 		if (job->com.getName() == comVec.at(comSelect)->getName() &&
-			job->getLotNumber() == lotNumber)
+			job->getLotNumber() == lotNumber) 
 			duplicate = true;
 	}
 	if (!duplicate) // If no duplicate lot number, create job and move to open Jobs vector
@@ -483,7 +454,7 @@ void editCommunityList(std::vector<std::shared_ptr<Community>>& comVec)
 	bool valid{false};
 	char input{};
 	int inputNum{};
-	do
+	do // loop until input is a valid selection
 	{	
 		system("cls");
 		displayCommunityList(comVec);
@@ -501,7 +472,7 @@ void editCommunityList(std::vector<std::shared_ptr<Community>>& comVec)
 		return;
 		
 	system("cls");
-	std:: cout << comVec.at(inputNum)->getName() << std::endl;
+	std:: cout << comVec.at(inputNum)->getName() << std::endl; // Display selected Community 
 	
 	
 	
@@ -527,6 +498,7 @@ void editCommunityList(std::vector<std::shared_ptr<Community>>& comVec)
 			//deleteCommunity(comVec.at(inputNum));
 			comVec.at(inputNum).reset();
 			comVec.erase(comVec.begin()+inputNum);
+			break;
 	}
 }
 
