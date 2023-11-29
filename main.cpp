@@ -243,16 +243,7 @@ void displayCommunityList(std::vector<std::shared_ptr<Community>>& vec)
 		}
 	}
 	else
-	{
 		std::cout << "No communities currently in list!" << std::endl;
-	}
-	
-	//system("pause");
-	
-//    for (int i{1}; i < vec.size() + 1; i++)
-//    {
-//        std::cout << i << " - " << vec.at(i-1)->getName() << std::endl;
-//    }
 }
 
 void assignHouseToCrew(std::unique_ptr<Crew>& crew, std::vector<std::unique_ptr<Jobs>>& jobsVec)
